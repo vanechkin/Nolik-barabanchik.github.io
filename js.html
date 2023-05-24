@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАВНАЯ стр</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="header-nav">
+            <img class="header-logo" src="images/logo.jpg" alt="">
+            <a href="index.html">Главная</a>
+            <a href="about.html">Об авторе</a>
+            <a href="modules.html">модули</a>
+            <a href="my-projects.html">Мои проекты</a>
+        </nav>
+    </header>
+    <main class="contaner" id="main">
+        <h2>страница для работы с js</h2>
+
+
+        <!--кнопка доп текста-->
+        <button type="button" onclick="hello()">Нажми на меня</button>
+        <!--кнопка очистки-->
+        <button type="button" onclick="reset()">нажми на меня</button>
+
+        <p id="example"></p>
+
+        <h3>Расширенная функция по замене текста</h3>
+
+        <p>Что говарят при приветствие</p>
+        <button type="button" onclick="set_text('p1', 'Привет')">Ответ</button>
+        <p id="p1">Абзац 1</p>
+
+        <p>Что говарят при покатствие</p>
+        <button type="button" onclick="set_text2('p2', 'Пока')">Ответ</button>
+        <p id="p2">Абзац 2</p>
+
+        <p>Что говарят при инязычном приветствие</p>
+        <button type="button" onclick="set_text3('p3', 'хэлоу')">ответ</button>
+        <p id="p3">Абзац 3</p>
+
+
+        <h3>Работа с формами Js</h3>
+        <div class="form">
+
+            <div class="form__item">
+                <div class="form__item-title">
+                    ФИО
+                </div>
+                <input type="text" placeholder="Иванов Баран приветов" id="name" value="Иванов Баран приветов">
+
+            </div>
+
+            <div class="form__item">
+                <div class="form__item-title">
+                    E-mail
+                </div>
+                <input type="text" placeholder="*email@*" id="email">
+            </div>
+
+            <div class="form__item">
+                <div class="form__item-title">
+                    Телефон
+                </div>
+                <input type="text" placeholder="8 800 511 40 40 " id="phone">
+            </div>
+
+            <button type="submit" onclick="submit()">Отправить</button>
+            <p id="status"></p>
+        </div>
+
+        <h3>Измененией стилей с пмощью js</h3>
+        <h4>Изменение цвета боди</h4>
+        <button tayp="button" onclick="set_body_color('#FF0000')">красный</button>
+        <button tayp="button" onclick="set_body_color('#0000CD')">синий</button>
+        <button tayp="button" onclick="set_body_color('#ADFF2F')">Зеленый</button>
+        <button tayp="button" onclick="set_body_color('#FFFF00')">жёлтый</button>
+
+
+
+        <div class="form__item">
+            <div class="form__item-title">
+                Введите цвет
+            </div>
+            <input type="text" id="color">
+        </div>
+
+        <button type="button" onclick="input_color">установить цвет</button>
+
+        <h4 id="font_size">изменение размера текста</h4>
+        <button type="button" onclick="set_font_size('font_size', '32px')">Изменить размер шрифта</button>
+
+        <h5>ЧЁТО</h5>
+        <button tayp="button" onclick="set_body_color('#F5F5DC')">нажми на меня и я поменяю твой цвет</button>
+        <button tayp="button" onclick="set_body_color('#ADFF2F')">на меня нажимй</button>
+        <button tayp="button" onclick="set_body_color('#0000CD')">Зеленый</button>
+
+        <h3>Изменение HTML-атрбутов с помощью JS</h3>
+        <img src="images/pic_bulboff.gif" alt="" id="lamp">
+        <button type="button" onclick="lampOn()">on☼</button>
+        <button type="button" onclick="lampOff()">off•</button>
+
+        <h4>удаление тегов с помощью JS</h4>
+        <h5 id="title">заголовок</h5>
+        <button type="button" onclick="deleteTitele()">Убрать заголовок</button>
+
+        <h4>Добовление тегов спомощью JS</h4>
+        <div id="buttonList">
+            <button type="button" onclick="createButton()">Создать кнопку</button>
+        </div>
+
+        <h4>Добовление тегов спомощью JS</h4>
+        <div id="PList">
+            <button type="button" onclick="createP()">Создать обзац</button>
+        </div>
+
+        <h3>Объекты javaScript</h3>
+
+        <p id="person"></p>
+        <button type="button" onclick="showPerson()">Показать Объекты person</button>
+
+        <p id="avto"></p>
+        <button type onclick="showAvto()">Показать Объекты avto</button>
+
+        <p id="cat"></p>
+        <button type="button" onclick="cat.showInfo()">Показать обЪукт cat</button>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Карта</h3>
+            <div class="footer__map">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8755ff5cc1e41d6a5d0c3aeb2c10ba51cd48a4e6f5bc148199b7e840330b13e3&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+            </div>
+            <p>
+                Сайт разработон Радченко Иваном Алексеевичем
+            </p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
